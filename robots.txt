@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rokuko-l.github.io/IndonesianG1/sitemap.xml

@@ -251,6 +251,24 @@ header {
 [data-theme="light"] .icon-dark {
     display: none;
 }
+footer a.github-link {
+    color: var(--gold);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+footer a.github-link:hover {
+    color: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.github-icon {
+    font-size: 1.2em;
+}
 
 /* ===== TABLE CONTROLS ===== */
 .table-controls {
