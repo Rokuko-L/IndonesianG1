@@ -3,6 +3,9 @@ let currentData = [];
 let sortColumn = null;
 let sortAscending = true;
 
+let currentLang = localStorage.getItem('language') || 'en';
+let currentTheme = localStorage.getItem('theme') || 'dark';
+
 // Load race data from JSON
 async function loadRaceData(jsonPath) {
     const tableBody = document.getElementById('tableBody');
@@ -40,10 +43,13 @@ function renderTable(data) {
             <td>${escapeHtml(record.year)}</td>
             <td>${escapeHtml(record.venue)}</td>
             <td>${escapeHtml(record.length)}</td>
-            <td><a href="#" onclick="showHorseDetails('${escapeHtml(record.name)}'); return false;">${escapeHtml(record.name)}</a></td>
-            <td><a href="#" onclick="showPersonDetails('${escapeHtml(record.jockey)}'); return false;">${escapeHtml(record.jockey)}</a></td>
-            <td><a href="#" onclick="showPersonDetails('${escapeHtml(record.trainer)}'); return false;">${escapeHtml(record.trainer)}</a></td>
-            <td><a href="#" onclick="showPersonDetails('${escapeHtml(record.owner)}'); return false;">${escapeHtml(record.owner)}</a></td>
+            <td><a href="https://studbook.or.id/${escapeHtml(record.name).toLowerCase().replace(/\s+/g, '-')}" target="_blank">${escapeHtml(record.name)}</a></td>
+            <td>${escapeHtml(record.time)}</td>
+            <td>${escapeHtml(record.province)}</td>
+            <td>${escapeHtml(record.jockey)}</td>
+            <td>${escapeHtml(record.trainer)}</td>
+            <td>${escapeHtml(record.owner)}</td>
+            <td>${escapeHtml(record.breeder)}</td>
         </tr>
     `).join('');
 }
@@ -72,71 +78,6 @@ function setupSearch() {
     });
 }
 
-// Sort functionality
-function setupSort() {
-    const headers = document.querySelectorAll('th[data-sort]');
-    
-    headers.forEach(header => {
-        header.addEventListener('click', () => {
-            const column = header.dataset.sort;
-            
-            // Toggle sort direction if clicking same column
-            if (sortColumn === column) {
-                sortAscending = !sortAscending;
-            } else {
-                sortColumn = column;
-                sortAscending = true;
-            }
-            
-            // Update UI
-            headers.forEach(h => h.classList.remove('sorted'));
-            header.classList.add('sorted');
-            
-            const icon = header.querySelector('.sort-icon');
-            icon.textContent = sortAscending ? '↑' : '↓';
-            
-            // Sort data
-            const sortedData = [...currentData].sort((a, b) => {
-                let aVal = a[column];
-                let bVal = b[column];
-                
-                // Handle numeric sorting
-                if (column === 'number' || column === 'year') {
-                    aVal = parseInt(aVal) || 0;
-                    bVal = parseInt(bVal) || 0;
-                }
-                
-                // Handle string sorting
-                aVal = aVal.toString().toLowerCase();
-                bVal = bVal.toString().toLowerCase();
-                
-                if (aVal < bVal) return sortAscending ? -1 : 1;
-                if (aVal > bVal) return sortAscending ? 1 : -1;
-                return 0;
-            });
-            
-            // Apply search filter if active
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const filteredData = searchTerm ? 
-                sortedData.filter(record => 
-                    Object.values(record).some(value => 
-                        value.toString().toLowerCase().includes(searchTerm)
-                    )
-                ) : sortedData;
-            
-            renderTable(filteredData);
-        });
-    });
-}
-
-// Detail view handlers (you can customize these)
-function showHorseDetails(name) {
-    alert(`Horse Details: ${name}\n\nThis would show detailed information about the horse. You can customize this function to show a modal or navigate to a detail page.`);
-}
-
-function showPersonDetails(name) {
-    alert(`Person Details: ${name}\n\nThis would show detailed information about the person. You can customize this function to show a modal or navigate to a detail page.`);
-}
 
 // Escape HTML to prevent XSS
 function escapeHtml(text) {
@@ -150,8 +91,60 @@ function escapeHtml(text) {
     return text.toString().replace(/[&<>"']/g, m => map[m]);
 }
 
+
+// Theme toggle
+function initTheme() {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
+        });
+    }
+}
+
+// Language toggle
+function initLanguage() {
+    updateLanguage();
+    
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'id' : 'en';
+            localStorage.setItem('language', currentLang);
+            updateLanguage();
+        });
+    }
+}
+
+function updateLanguage() {
+    const t = translations[currentLang];
+    
+    // Update all elements with data-translate attribute
+    document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (t[key]) {
+            if (el.tagName === 'INPUT') {
+                el.placeholder = t[key];
+            } else {
+                el.textContent = t[key];
+            }
+        }
+    });
+    
+    // Update lang button
+    const langBtn = document.getElementById('langToggle');
+    if (langBtn) {
+        langBtn.querySelector('.lang-text').textContent = currentLang.toUpperCase();
+    }
+}
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    initLanguage();
     setupSearch();
     setupSort();
 });
