@@ -1,0 +1,393 @@
+/* ===== VARIABLES ===== */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #2a2a2a;
+    --gold: #d4af37;
+    --gold-dark: #b8941f;
+    --gold-light: #f0d97d;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border: #333333;
+    --hover: rgba(212, 175, 55, 0.1);
+}
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1410 100%);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 40px;
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+}
+
+.logo {
+    font-size: 3em;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+.tagline {
+    color: var(--text-secondary);
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.breadcrumb {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.breadcrumb a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--gold-light);
+}
+
+/* ===== HOME PAGE ===== */
+.home-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--text-secondary);
+    margin-bottom: 60px;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.main-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 30px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.main-button:hover::before {
+    left: 100%;
+}
+
+.main-button:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.button-icon {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.main-button:hover .button-icon {
+    filter: grayscale(0%) drop-shadow(0 0 10px var(--gold));
+}
+
+.button-text {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.button-desc {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* ===== RACE PAGES ===== */
+.race-content {
+    flex: 1;
+}
+
+.race-intro {
+    background: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    margin-bottom: 40px;
+}
+
+.race-intro h2 {
+    color: var(--gold);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.race-intro p {
+    color: var(--text-secondary);
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* ===== TABLE CONTROLS ===== */
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px 20px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.search-box::placeholder {
+    color: var(--text-secondary);
+}
+
+.filter-info {
+    color: var(--text-secondary);
+    font-size: 0.95em;
+}
+
+/* ===== TABLE ===== */
+.table-wrapper {
+    overflow-x: auto;
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.race-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.race-table thead {
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.race-table th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.race-table th:hover {
+    background: var(--hover);
+}
+
+.sort-icon {
+    margin-left: 5px;
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+.race-table th.sorted .sort-icon {
+    opacity: 1;
+    color: var(--gold-light);
+}
+
+.race-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+}
+
+.race-table tbody tr:hover {
+    background: var(--hover);
+}
+
+.race-table td {
+    padding: 18px 15px;
+    color: var(--text-primary);
+}
+
+.race-table td a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    position: relative;
+}
+
+.race-table td a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold-light);
+    transition: width 0.3s;
+}
+
+.race-table td a:hover {
+    color: var(--gold-light);
+}
+
+.race-table td a:hover::after {
+    width: 100%;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2em;
+    }
+    
+    .tagline {
+        font-size: 1em;
+    }
+    
+    .intro-text {
+        font-size: 1em;
+    }
+    
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-button {
+        padding: 40px 20px;
+    }
+    
+    .race-intro {
+        padding: 25px;
+    }
+    
+    .race-intro h2 {
+        font-size: 1.5em;
+    }
+    
+    .table-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        min-width: 100%;
+    }
+    
+    .race-table {
+        font-size: 0.85em;
+    }
+    
+    .race-table th,
+    .race-table td {
+        padding: 12px 10px;
+    }
+}
+
+/* ===== LOADING STATE ===== */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+    font-style: italic;
+}

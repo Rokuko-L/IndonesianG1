@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesian Derby - Race Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Indonesian Derby</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> / Indonesian Derby
+            </nav>
+        </header>
+        
+        <main class="race-content">
+            <div class="race-intro">
+                <h2>The Indonesian Derby</h2>
+                <p>
+                    The Indonesian Derby stands as the pinnacle of horse racing in Indonesia. 
+                    This prestigious event showcases the finest horses, jockeys, and trainers, 
+                    with a rich history of unforgettable moments and legendary champions.
+                </p>
+            </div>
+            
+            <div class="table-controls">
+                <input type="text" id="searchInput" placeholder="Search records..." class="search-box">
+                <div class="filter-info">
+                    <span id="recordCount">Loading records...</span>
+                </div>
+            </div>
+            
+            <div class="table-wrapper">
+                <table id="raceTable" class="race-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="number">No. <span class="sort-icon">↕</span></th>
+                            <th data-sort="year">Year <span class="sort-icon">↕</span></th>
+                            <th data-sort="venue">Venue <span class="sort-icon">↕</span></th>
+                            <th data-sort="length">Length <span class="sort-icon">↕</span></th>
+                            <th data-sort="name">Horse Name <span class="sort-icon">↕</span></th>
+                            <th data-sort="jockey">Jockey <span class="sort-icon">↕</span></th>
+                            <th data-sort="trainer">Trainer <span class="sort-icon">↕</span></th>
+                            <th data-sort="owner">Owner <span class="sort-icon">↕</span></th>
+                            <th data-sort="breeder">Breeder <span class="sort-icon">↕</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Indonesian Horse Racing Archive</p>
+        </footer>
+    </div>
+    
+    <script src="table-handler.js"></script>
+    <script>
+        // Load Indonesian Derby data
+        loadRaceData('data/indonesian-derby.json');
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Sprint - Race Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Super Sprint</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> / Super Sprint
+            </nav>
+        </header>
+        
+        <main class="race-content">
+            <div class="race-intro">
+                <h2>The Super Sprint</h2>
+                <p>
+                    The Super Sprint celebrates pure speed and agility in Indonesian horse racing. 
+                    This electrifying event features the fastest horses competing over a 1300M track, 
+                    delivering heart-pounding action and showcasing exceptional athletic prowess.
+                </p>
+            </div>
+            
+            <div class="table-controls">
+                <input type="text" id="searchInput" placeholder="Search records..." class="search-box">
+                <div class="filter-info">
+                    <span id="recordCount">Loading records...</span>
+                </div>
+            </div>
+            
+            <div class="table-wrapper">
+                <table id="raceTable" class="race-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="number">No. <span class="sort-icon">↕</span></th>
+                            <th data-sort="year">Year <span class="sort-icon">↕</span></th>
+                            <th data-sort="venue">Venue <span class="sort-icon">↕</span></th>
+                            <th data-sort="length">Length <span class="sort-icon">↕</span></th>
+                            <th data-sort="name">Horse Name <span class="sort-icon">↕</span></th>
+                            <th data-sort="jockey">Jockey <span class="sort-icon">↕</span></th>
+                            <th data-sort="trainer">Trainer <span class="sort-icon">↕</span></th>
+                            <th data-sort="owner">Owner <span class="sort-icon">↕</span></th>
+                            <th data-sort="breeder">Breeder <span class="sort-icon">↕</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Indonesian Horse Racing Archive</p>
+        </footer>
+    </div>
+    
+    <script src="table-handler.js"></script>
+    <script>
+        // Load Super Sprint data
+        loadRaceData('data/super-sprint.json');
+    </script>
+</body>
+</html>
