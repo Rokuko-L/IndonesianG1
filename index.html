@@ -15,7 +15,9 @@
     <meta property="og:url" content="https://rokuko-l.github.io/IndonesianG1/">
 </head>
 <body>
+    
     <div class="container">
+        <div id="vanta-bg"></div>
         <header>
             <h1 class="logo">Indonesian Horse Racing</h1>
             <p class="tagline">Historic Race Records & Champions</p>
@@ -61,5 +63,23 @@
             </a>
         </p>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.trunk.min.js"></script>
+    <script>
+    VANTA.TRUNK({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      spacing: 50.00,
+      chaos: 3.50,
+      color: 0xb8941f
+    })
+    </script>
 </body>
 </html>
