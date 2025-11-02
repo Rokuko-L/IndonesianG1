@@ -73,11 +73,6 @@ Format:
 - Public racing records
 - Community contributions
 
-## Tech Stack
-- Vanilla HTML/CSS/JavaScript
-- No frameworks, just simple and fast
-- Hosted on GitHub Pages
-
 ## License
 Data compiled for archival and educational purposes. Not affiliated with any official racing organization.
 
