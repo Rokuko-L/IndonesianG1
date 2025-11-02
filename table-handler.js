@@ -20,6 +20,8 @@ async function loadRaceData(jsonPath) {
         currentData = await response.json();
         renderTable(currentData);
         updateRecordCount(currentData.length);
+
+        setupSort();
         
     } catch (error) {
         console.error('Error loading data:', error);
@@ -75,6 +77,62 @@ function setupSearch() {
         
         renderTable(filteredData);
         updateRecordCount(filteredData.length);
+    });
+}
+
+function setupSort() {
+    const headers = document.querySelectorAll('th[data-sort]');
+    
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const column = header.dataset.sort;
+            
+            // Toggle sort direction if clicking same column
+            if (sortColumn === column) {
+                sortAscending = !sortAscending;
+            } else {
+                sortColumn = column;
+                sortAscending = true;
+            }
+            
+            // Update UI
+            headers.forEach(h => h.classList.remove('sorted'));
+            header.classList.add('sorted');
+            
+            const icon = header.querySelector('.sort-icon');
+            icon.textContent = sortAscending ? '↑' : '↓';
+            
+            // Sort data
+            const sortedData = [...currentData].sort((a, b) => {
+                let aVal = a[column];
+                let bVal = b[column];
+                
+                // Handle numeric sorting
+                if (column === 'number' || column === 'year') {
+                    aVal = parseInt(aVal) || 0;
+                    bVal = parseInt(bVal) || 0;
+                }
+                
+                // Handle string sorting
+                aVal = aVal.toString().toLowerCase();
+                bVal = bVal.toString().toLowerCase();
+                
+                if (aVal < bVal) return sortAscending ? -1 : 1;
+                if (aVal > bVal) return sortAscending ? 1 : -1;
+                return 0;
+            });
+            
+            // Apply search filter if active
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filteredData = searchTerm ? 
+                sortedData.filter(record => 
+                    Object.values(record).some(value => 
+                        value.toString().toLowerCase().includes(searchTerm)
+                    )
+                ) : sortedData;
+            
+            renderTable(filteredData);
+        });
     });
 }
 
@@ -146,5 +204,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initLanguage();
     setupSearch();
-    setupSort();
 });

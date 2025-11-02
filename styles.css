@@ -59,7 +59,7 @@ body[data-theme="light"] {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 20px;
     min-height: 100vh;
@@ -301,7 +301,7 @@ header {
 .race-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.95em;
+    font-size: 1em;
 }
 
 .race-table thead {
@@ -312,7 +312,7 @@ header {
 }
 
 .race-table th {
-    padding: 20px 15px;
+    padding: 18px 12px;
     text-align: left;
     font-weight: 600;
     color: var(--gold);
@@ -348,7 +348,7 @@ header {
 }
 
 .race-table td {
-    padding: 18px 15px;
+    padding: 16px 12px;
     color: var(--text-primary);
 }
 
