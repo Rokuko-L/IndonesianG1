@@ -22,6 +22,7 @@ async function loadRaceData(jsonPath) {
         updateRecordCount(currentData.length);
 
         setupSort();
+        setupSearch();
         
     } catch (error) {
         console.error('Error loading data:', error);
@@ -68,6 +69,8 @@ function setupSearch() {
     
     searchInput.addEventListener('input', (e) => {
         const searchTerm = e.target.value.toLowerCase();
+         console.log('Searching for:', searchTerm); // Add this
+        console.log('Current data length:', currentData.length);
         
         const filteredData = currentData.filter(record => {
             return Object.values(record).some(value => 
@@ -75,6 +78,7 @@ function setupSearch() {
             );
         });
         
+        console.log('Filtered results:', filteredData.length);
         renderTable(filteredData);
         updateRecordCount(filteredData.length);
     });
@@ -203,5 +207,5 @@ function updateLanguage() {
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initLanguage();
-    setupSearch();
+    
 });
