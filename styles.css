@@ -464,6 +464,10 @@ footer {
     .race-table td {
         padding: 12px 10px;
     }
+    
+    #vanta-bg {
+        display: none;
+    }
 }
 
 /* ===== LOADING STATE ===== */

@@ -2,7 +2,7 @@
     {
         "number": 1,
         "year": 1974,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1200m",
         "name": "PRIAM",
         "time": "-",
@@ -15,7 +15,7 @@
     {
         "number": 2,
         "year": 1975,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "VALENCIA",
         "time": "-",
@@ -28,7 +28,7 @@
     {
         "number": 3,
         "year": 1976,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "CEMPAKA",
         "time": "-",
@@ -41,7 +41,7 @@
     {
         "number": 4,
         "year": 1977,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "BAYU KARTIKA",
         "time": "-",
@@ -54,7 +54,7 @@
     {
         "number": 5,
         "year": 1978,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "MYSTERE",
         "time": "-",
@@ -67,7 +67,7 @@
     {
         "number": 6,
         "year": 1979,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "TRISOELA",
         "time": "-",
@@ -80,7 +80,7 @@
     {
         "number": 7,
         "year": 1980,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "KEN AYU",
         "time": "-",
@@ -93,7 +93,7 @@
     {
         "number": 8,
         "year": 1981,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "PEJOANG",
         "time": "-",
@@ -106,7 +106,7 @@
     {
         "number": 9,
         "year": 1982,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "LEONARDO",
         "time": "-",
@@ -119,7 +119,7 @@
     {
         "number": 10,
         "year": 1983,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "RIO BRAVO",
         "time": "-",
@@ -132,7 +132,7 @@
     {
         "number": 11,
         "year": 1984,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "MAWAR MELATI",
         "time": "-",
@@ -145,7 +145,7 @@
     {
         "number": 12,
         "year": 1985,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "LIBERTY",
         "time": "-",
@@ -158,7 +158,7 @@
     {
         "number": 13,
         "year": 1986,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "PUTRA SULUT",
         "time": "-",
@@ -171,7 +171,7 @@
     {
         "number": 14,
         "year": 1987,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "SARI POHACI",
         "time": "-",
@@ -184,7 +184,7 @@
     {
         "number": 15,
         "year": 1988,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "GALIGO",
         "time": "-",
@@ -197,7 +197,7 @@
     {
         "number": 16,
         "year": 1989,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1400m",
         "name": "PUTRI PAJAJARAN",
         "time": "-",
@@ -210,7 +210,7 @@
     {
         "number": 17,
         "year": 1990,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1600m",
         "name": "BIG BEN",
         "time": "-",
@@ -223,7 +223,7 @@
     {
         "number": 18,
         "year": 1991,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1600m",
         "name": "MULAWARMAN",
         "time": "-",
@@ -236,10 +236,10 @@
     {
         "number": 19,
         "year": 1992,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1600m",
         "name": "RATU ADRIA",
-        "time": "-",
+        "time": "1.15.30?",
         "province": "DKI Jakarta",
         "jockey": "J. Sumuweng",
         "trainer": "E. Lanujaya",
@@ -249,7 +249,7 @@
     {
         "number": 20,
         "year": 1993,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1600m",
         "name": "ROOFCRYL",
         "time": "-",
@@ -262,7 +262,7 @@
     {
         "number": 21,
         "year": 1994,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1600m",
         "name": "ROBIN HOOD",
         "time": "-",
@@ -275,7 +275,7 @@
     {
         "number": 22,
         "year": 1995,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "LUCKY STRIKE",
         "time": "-",
@@ -288,7 +288,7 @@
     {
         "number": 23,
         "year": 1996,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "LADY CENTAVO",
         "time": "-",
@@ -301,7 +301,7 @@
     {
         "number": 24,
         "year": 1997,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "RATU MAYANGKARA",
         "time": "-",
@@ -314,7 +314,7 @@
     {
         "number": 25,
         "year": 1998,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "PERMATA RAJAWALI",
         "time": "-",
@@ -327,7 +327,7 @@
     {
         "number": 26,
         "year": 1999,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "NEFERTITI",
         "time": "-",
@@ -340,7 +340,7 @@
     {
         "number": 27,
         "year": 2000,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "INDON",
         "time": "-",
@@ -353,7 +353,7 @@
     {
         "number": 28,
         "year": 2001,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "RATU NAGARI",
         "time": "-",
@@ -366,7 +366,7 @@
     {
         "number": 29,
         "year": 2002,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "MANIK TRISULA",
         "time": "-",
@@ -379,7 +379,7 @@
     {
         "number": 30,
         "year": 2003,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "DEWI MILENIA",
         "time": "-",
@@ -392,7 +392,7 @@
     {
         "number": 31,
         "year": 2004,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "1850m",
         "name": "WALI NAGARI",
         "time": "-",
@@ -405,7 +405,7 @@
     {
         "number": 32,
         "year": 2005,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "PESONA KARUNIA",
         "time": "-",
@@ -418,7 +418,7 @@
     {
         "number": 33,
         "year": 2006,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "EXOTICA",
         "time": "-",
@@ -431,7 +431,7 @@
     {
         "number": 34,
         "year": 2007,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "BRAVE HEART",
         "time": "-",
@@ -444,7 +444,7 @@
     {
         "number": 35,
         "year": 2008,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "PESONA NAGARI",
         "time": "-",
@@ -457,7 +457,7 @@
     {
         "number": 36,
         "year": 2009,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "MESSA",
         "time": "-",
@@ -470,7 +470,7 @@
     {
         "number": 37,
         "year": 2010,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "CAHAYA NAGARI",
         "time": "-",
@@ -483,7 +483,7 @@
     {
         "number": 38,
         "year": 2011,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "GAGAH TANJUNGSARI",
         "time": "-",
@@ -496,7 +496,7 @@
     {
         "number": 39,
         "year": 2012,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "TEBARAN MEGA",
         "time": "-",
@@ -509,7 +509,7 @@
     {
         "number": 40,
         "year": 2013,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "RED SILENOS",
         "time": "-",
@@ -522,7 +522,7 @@
     {
         "number": 41,
         "year": 2014,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "DJOHAR MANIK",
         "time": "-",
@@ -535,7 +535,7 @@
     {
         "number": 42,
         "year": 2015,
-        "venue": "-",
+        "venue": "Pulomas",
         "length": "2000m",
         "name": "BEAUTY EAGLING",
         "time": "-",
@@ -548,7 +548,7 @@
     {
         "number": 43,
         "year": 2016,
-        "venue": "-",
+        "venue": "Salatiga",
         "length": "2000m",
         "name": "DRAGON RUNNER",
         "time": "-",
@@ -561,7 +561,7 @@
     {
         "number": 44,
         "year": 2017,
-        "venue": "-",
+        "venue": "Salatiga",
         "length": "2000m",
         "name": "KAMANG CHROME",
         "time": "-",
@@ -574,7 +574,7 @@
     {
         "number": 45,
         "year": 2018,
-        "venue": "-",
+        "venue": "Salatiga",
         "length": "2000m",
         "name": "LADY ARIA",
         "time": "-",
@@ -587,7 +587,7 @@
     {
         "number": 46,
         "year": 2019,
-        "venue": "-",
+        "venue": "Salatiga",
         "length": "2000m",
         "name": "CINDERELLA JATIM",
         "time": "-",
@@ -600,7 +600,7 @@
     {
         "number": 47,
         "year": 2021,
-        "venue": "-",
+        "venue": "Pangandaran",
         "length": "2000m",
         "name": "LADY JAY",
         "time": "-",
@@ -613,7 +613,7 @@
     {
         "number": 48,
         "year": 2022,
-        "venue": "-",
+        "venue": "Pasuruan",
         "length": "2000m",
         "name": "LYANA NAGARI",
         "time": "-",
@@ -626,7 +626,7 @@
     {
         "number": 49,
         "year": 2023,
-        "venue": "-",
+        "venue": "Sawahlunto",
         "length": "2000m",
         "name": "BINTANG MAJA",
         "time": "-",
@@ -639,7 +639,7 @@
     {
         "number": 50,
         "year": 2024,
-        "venue": "-",
+        "venue": "Yogyakarta",
         "length": "2000m",
         "name": "RAPID DASH",
         "time": "-",
@@ -652,7 +652,7 @@
     {
         "number": 51,
         "year": 2025,
-        "venue": "-",
+        "venue": "Yogyakarta",
         "length": "2000m",
         "name": "KING ARGENTIN",
         "time": "-",

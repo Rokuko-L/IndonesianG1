@@ -6,11 +6,11 @@
         "length": "2000 M",
         "name": "Robin Hood",
         "time": "-",
-        "province": "-",
+        "province": "DKI Jakarta",
         "jockey": "-",
-        "trainer": "-",
-        "owner": "-",
-        "breeder": "-"
+        "trainer": "Wahono AT",
+        "owner": "Ir. Jeane",
+        "breeder": "Pamulang Stable"
     },
     {
         "number": 2,
@@ -197,7 +197,7 @@
     {
         "number": 16,
         "year": 2011,
-        "venue": "Jakarta",
+        "venue": "Pulomas",
         "length": "2200 M",
         "name": "Saud",
         "time": "-",
@@ -210,7 +210,7 @@
     {
         "number": 17,
         "year": 2012,
-        "venue": "Jakarta",
+        "venue": "Pulomas",
         "length": "2200 M",
         "name": "Saud",
         "time": "-",
