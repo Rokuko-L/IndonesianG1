@@ -1,4 +1,30 @@
 [
+        {
+        "number": 1,
+        "year": 1972,
+        "venue": "Pulomas",
+        "length": "1200m",
+        "name": "SAMPANI",
+        "time": "-",
+        "province": "DKI Jakarta",
+        "jockey": "Memed",
+        "trainer": "-",
+        "owner": "Medal Sekarwangi",
+        "breeder": "Atang Sobandi"
+    },
+        {
+        "number": 2,
+        "year": 1973,
+        "venue": "Pulomas",
+        "length": "1200m",
+        "name": "Jimmy",
+        "time": "-",
+        "province": "DKI Jakarta",
+        "jockey": "Sukarya",
+        "trainer": "-",
+        "owner": "Leidayasi",
+        "breeder": "Leidayasi"
+    },
     {
         "number": 1,
         "year": 1974,
