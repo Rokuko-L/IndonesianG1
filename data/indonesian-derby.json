@@ -2,7 +2,7 @@
         {
         "number": 1,
         "year": 1972,
-        "venue": "Pulomas",
+        "venue": "-",
         "length": "1200m",
         "name": "SAMPANI",
         "time": "-",
@@ -15,7 +15,7 @@
         {
         "number": 2,
         "year": 1973,
-        "venue": "Pulomas",
+        "venue": "-",
         "length": "1200m",
         "name": "Jimmy",
         "time": "-",
@@ -28,7 +28,7 @@
     {
         "number": 1,
         "year": 1974,
-        "venue": "Pulomas",
+        "venue": "Tompaso",
         "length": "1200m",
         "name": "PRIAM",
         "time": "-",
@@ -41,7 +41,7 @@
     {
         "number": 2,
         "year": 1975,
-        "venue": "Pulomas",
+        "venue": "Bandung",
         "length": "1400m",
         "name": "VALENCIA",
         "time": "-",
